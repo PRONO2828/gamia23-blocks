@@ -1,0 +1,8 @@
+<resources>
+    <!-- No action bar: the web page draws its own header, so a native title
+         bar would just be a second one. -->
+    <style name="AppTheme" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:windowBackground">@color/bg</item>
+    </style>
+</resources>
