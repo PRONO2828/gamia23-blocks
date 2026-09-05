@@ -1,0 +1,33 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'com.gamia23.blocks'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.gamia23.blocks"
+        // 24 = Android 7.0. Covers essentially every phone still in use while
+        // still giving a modern WebView.
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        // The debug build is what CI publishes. It is signed with Android's
+        // standard debug key, which is what makes it installable by sideloading
+        // without anyone needing to manage a private keystore. It is NOT
+        // suitable for the Play Store — that needs a real signing key.
+        debug {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies { }
